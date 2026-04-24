@@ -31,7 +31,7 @@ Cada slide tiene título, subtítulo, cuerpo y notas del presentador. El cuerpo 
 | ¿Se entiende? | Un rol nuevo lo usa sin tutorial |
 
 **Notas del presentador:**
-En 75 minutos, con cuentas reales, vamos a responder estas tres preguntas. Al cierre, decidimos si el prototipo sale a producción piloto o qué le falta resolver primero.
+En 75 minutos, testeando el prototipo vacío de forma funcional, vamos a responder estas tres preguntas. Al cierre (o asincrónicamente, según la modalidad elegida), decidimos si el prototipo sale a producción piloto o qué le falta resolver primero.
 
 ---
 
@@ -75,7 +75,7 @@ No es "aprobemos y salimos". Es "decidimos juntos con evidencia". La diferencia 
 | 0 | Kickoff | 5 min | Contexto, reglas, presentación de equipos |
 | 1 | Smoke Test común | 8 min | 6 steps básicos · calibra severidad entre equipos |
 | 🔧 | **Pitstop 1** | 4 min | Responsable de GTM Engineering recibe Batch 1 y arranca fixes |
-| 2 | Script · Primera mitad | 18 min | Secciones 01–05 · Ficha, Squad, Contexto, Métricas, Nómina |
+| 2 | Script · Primera mitad | 18 min | Ficha, Squad, Contexto, Nómina (4 secciones) |
 | 🔧 | **Pitstop 2** | 5 min | Fixes del Batch 1 listos · se entrega Batch 2 |
 | 3 | Script · Segunda mitad + Retest | 20 min | Secciones 06–11 + retest de fixes del Batch 1 |
 | 🔧 | **Pitstop 3** | 3 min | Último batch · scriba cierra planilla |
@@ -92,24 +92,24 @@ Los pitstops son sagrados. Sin pitstop, el responsable de GTM Engineering no arr
 
 **Número de slide:** 03
 **Título:** Los equipos · 1 squad = 1 equipo
-**Subtítulo:** Cada squad testea con SU cuenta real · sin personas artificiales · sin casos ficticios
+**Subtítulo:** Cada squad testea el prototipo vacío funcionalmente · mismo script y datos de prueba para todos · lo que cambia es la lente
 
 **Columna izquierda · "Cómo funciona" (lista):**
-- 2–4 personas por squad · idealmente con el AD presente
-- El squad elige UNA cuenta propia, la más representativa
+- Equipo por squad: **AD + CS** · se suma un rol de apoyo si hace falta
 - Todos tocan el prototipo · el squad decide internamente quién carga y quién toma notas
-- Se usa el script común · lo que cambia son los datos reales de cada cuenta
+- Testing funcional sobre el prototipo vacío · datos de prueba cargados en vivo
+- Mismo script común para todos los equipos
 
 **Columna derecha · "Por qué así" (3 bloques con subtítulo + descripción):**
 
 | Subtítulo | Descripción |
 |---|---|
-| Hallazgos complementarios sin diseñarlo | Una cuenta Mature estresa la Nómina. Una Customer estresa la Ficha. Una Strategic estresa Expansión. Se cubre todo el prototipo naturalmente. |
-| Hallazgos reales | No son bugs de "¿y si alguien cargara 200 Acidians?". Son los problemas que van a aparecer el lunes, con tus datos. |
-| Expertise en la sala | Cada squad conoce su cuenta como nadie. Detecta ausencias y redundancias que alguien de afuera no vería. |
+| Diversidad de lente | Cada squad trabaja diferente. Lo que para un AD es un flujo natural, para otro es un paso que falta. Esas diferencias de lectura son el hallazgo. |
+| Hallazgos de uso real | No son bugs de "¿y si alguien cargara 200 Acidians?". Son los roces que el squad va a tener cuando use esto el lunes con sus datos. |
+| Expertise en la sala | El AD y el CS conocen el día a día del squad como nadie. Detectan ausencias y redundancias que alguien de afuera no vería. |
 
 **Notas del presentador:**
-La división por squads no es aleatoria. Es la forma más rápida de cubrir todo el prototipo sin duplicar esfuerzo. Cada cuenta estresa partes diferentes del sistema.
+La división por squads no es aleatoria. Es la forma más rápida de cubrir todo el prototipo con perspectivas distintas. El prototipo es el mismo para todos — lo que cambia es quién lo está mirando.
 
 ---
 
@@ -158,7 +158,7 @@ Esta es la diferencia clave de este hackathon. La regla de oro es: el responsabl
 
 | # | Principio | Descripción |
 |---|---|---|
-| 1 | Usen el prototipo como lo usarían el lunes a las 9am. | No es QA manual exhaustivo. Es testing de uso real con datos reales. |
+| 1 | Usen el prototipo como lo usarían el lunes a las 9am. | No es QA manual exhaustivo. Es testing funcional con datos de prueba representativos. |
 | 2 | Si algo les hace fruncir el ceño, anótenlo. | La fricción es un hallazgo válido aunque nada esté "roto". |
 | 3 | Un hallazgo = una fila. | Síntoma observable + sección + severidad. Sin ensayo literario. |
 | 4 | Prohibido decir "quedaría lindo si…" | …sin decir qué problema concreto resuelve. |
@@ -186,11 +186,10 @@ El principio 5 es el más difícil de respetar. Cuando alguien encuentra algo, l
 | S.2 | Click en cada una de las 12 tabs (00–11) | Cambia la sección · ninguna queda en blanco ni tira error |
 | S.3 | Completar Cliente / Squad / Quarter en Ficha | El header superior se actualiza en vivo (título + chips) |
 | S.4 | Elegir Madurez = Growth y Tier = B | Chips cambian · aparece descripción debajo de cada botón |
-| S.5 | Métricas · Revenue=100000 · Margen=35 | DPRR se calcula a 35% y se refleja en header y sección |
-| S.6 | Click en los 3 links externos (CRM / Kanban / Looker) | Alert "Próximamente" · comportamiento esperado, NO bug |
+| S.5 | Click en los 3 links externos (CRM / Kanban / Looker) | Alert "Próximamente" · comportamiento esperado, NO bug |
 
 **Caja de alerta (rojo):**
-⚠ Si S.1 a S.5 falla en algún equipo → bloqueador automático para GO LIVE. Se reporta y se sigue con el resto del hackathon.
+⚠ Si S.1 a S.4 falla en algún equipo → bloqueador automático para GO LIVE. Se reporta y se sigue con el resto del hackathon.
 
 **Notas del presentador:**
 El smoke sirve para dos cosas: verificar que todos arrancan bien y que todos clasifican severidad con el mismo criterio. Si alguien dice "menor" de un bug que otros reportan como "bloqueador", hay que alinear ahora.
@@ -203,20 +202,19 @@ El smoke sirve para dos cosas: verificar que todos arrancan bien y que todos cla
 
 **Número de slide:** 07
 **Título:** Bloque 2 · Script · Primera mitad · 18 min
-**Subtítulo:** Setup + Financials · 5 secciones · cada squad con su cuenta real
+**Subtítulo:** Setup + Nómina · 4 secciones · prototipo vacío con datos de prueba
 
 **Secciones a testear (cada una con badge numérico):**
 
 | N° | Sección | Tarea |
 |---|---|---|
-| 01 | Ficha | Completar todos los campos con datos reales · probar los 4 botones de Madurez y los 4 de Tier |
-| 02 | Squad ABE | Cargar roles reales · usar "+ agregar" para sumar 1 CS, 1 GD, 1 DL adicionales |
-| 03 | Contexto | Completar al menos 4 de las 8 áreas de madurez digital con notas reales · probar selector Alto/Medio/Bajo |
-| 04 | Métricas | Revenue, Margen, posiciones, churn, NRR, share of wallet, pipeline · verificar DPRR en header |
-| 05 | Nómina | Cargar al menos 5 Acidians reales (pueden ser iniciales) · probar "+ agregar" · verificar resumen superior |
+| 01 | Ficha | Completar todos los campos con datos de prueba · probar los 4 botones de Madurez y los 4 de Tier |
+| 02 | Squad ABE | Cargar roles de prueba · usar "+ agregar" para sumar 1 CS, 1 GD, 1 DL adicionales |
+| 03 | Contexto | Completar al menos 4 de las 8 áreas de madurez digital con notas de prueba · probar selector Alto/Medio/Bajo |
+| 05 | Nómina | Cargar al menos 5 Acidians de prueba (iniciales o nombres ficticios) · probar "+ agregar" · verificar resumen superior |
 
 **Caja "🔍 Mirar con lupa" (pie de slide, fondo light):**
-¿La renta total de Nómina cuadra con Revenue? · ¿El DPRR se actualiza al cargar Nómina o solo en Métricas? · ¿Se pierde el foco al agregar filas? · ¿Los placeholders dan ejemplos útiles?
+¿Se pierde el foco al agregar filas? · ¿Los placeholders dan ejemplos útiles? · ¿La numeración salteando 04 genera confusión?
 
 **Notas del presentador:**
 En este bloque se carga la estructura base del plan. Ojo con las inconsistencias entre secciones — es donde más van a aparecer.
@@ -235,15 +233,15 @@ En este bloque se carga la estructura base del plan. Ojo con las inconsistencias
 
 | N° | Sección | Tarea |
 |---|---|---|
-| 06 | Contrapartes | Al menos 3 contrapartes reales con Tier, estado Q anterior, estado Q actual, share of wallet |
-| 07 | Churn | 1–2 registros de salidas reales del último trimestre · marcar Churn Sí/No · verificar contadores del tope |
-| 08 | Expansión | 2 hipótesis de farming reales · unidad, sponsor, propuesta, orden de magnitud |
+| 06 | Contrapartes | Al menos 3 contrapartes de prueba con Tier, estado Q anterior, estado Q actual, share of wallet |
+| 07 | Churn | 1–2 registros de salidas de prueba · marcar Churn Sí/No · verificar contadores del tope |
+| 08 | Expansión | 2 hipótesis de farming de prueba · unidad, sponsor, propuesta, orden de magnitud |
 | 09 | Salud | Semáforo verde/amarillo/rojo para 3 Acidians · ver si contadores superiores suman bien |
 | 10 | Stack | Revisar tecnologías prellenadas · agregar 1 área nueva con "+ agregar área" |
-| 11 | Competencia | 1–2 vendors reales · 2 gerencias con Share of Wallet estimado |
+| 11 | Competencia | 1–2 vendors de prueba · 2 gerencias con Share of Wallet estimado |
 
 **Caja "🔄 Retest obligatorio al final (≈3 min)" (pie de slide, fondo azul light):**
-El facilitador le pregunta al responsable de GTM Engineering qué fixes del Batch 1 aplicó. Cada equipo retestea en su cuenta y actualiza el estado en la planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
+El facilitador le pregunta al responsable de GTM Engineering qué fixes del Batch 1 aplicó. Cada equipo retestea sobre el prototipo y actualiza el estado en la planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
 
 **Notas del presentador:**
 El retest es lo que cierra el loop. Si no retestean, los fixes del responsable de GTM Engineering no bajan la severidad del backlog y la votación final queda falseada.
@@ -342,7 +340,7 @@ La cuarta pregunta es la más importante. Si algún equipo duda, es NO-GO. No ha
 | 1 | Facilitador | Dueño del tiempo. Rota entre equipos. Corta discusiones fuera de script. Modera la votación. |
 | 1 | Scriba | Consolida hallazgos en la planilla en vivo. Deduplica. Proyecta en pantalla en pitstops. |
 | 1 | Responsable de GTM Engineering | Aplica fixes en vivo entre bloques. Recibe batches. No defiende el diseño. |
-| N | Equipo (squad) | Testea con su cuenta real. Completa la planilla. Vota al cierre. |
+| N | Equipo (squad) | AD + CS (+ apoyo opcional). Testea el prototipo funcionalmente con datos de prueba. Completa la planilla. Vota al cierre (solo en Modalidad A). |
 
 **Notas del presentador:**
 Los tres roles individuales (facilitador, scriba, responsable de GTM Engineering) no pueden faltar. El scriba es el rol más subestimado y el más crítico: sin planilla viva, no hay decisión al final.
@@ -357,12 +355,12 @@ Los tres roles individuales (facilitador, scriba, responsable de GTM Engineering
 **Subtítulo (azul):** En 75 minutos sabemos si este Account Plan va a producción o qué le falta.
 
 **Recordatorios (3 bullets con dot azul):**
-- Cada squad con SU cuenta real
+- Cada squad testea el prototipo vacío funcionalmente (AD + CS + apoyo opcional)
 - El responsable de GTM Engineering arregla en vivo entre bloques
-- Al cierre votamos GO · GO CONDICIONAL · NO-GO
+- Al cierre: **Modalidad A** · votamos GO / CONDICIONAL / NO-GO · o **Modalidad B** · entregamos el backlog al GTM, que define la próxima iteración asincrónicamente
 
 **Notas del presentador:**
-Cierre breve. No recapitular — ya saben lo que hay que hacer. Solo reforzar que los 3 pilares están: cuenta real, fixes en vivo, decisión concreta al final.
+Cierre breve. No recapitular — ya saben lo que hay que hacer. Solo reforzar los 3 pilares: testing funcional, fixes en vivo, y la modalidad de cierre elegida (decidida antes del hackathon por el facilitador).
 
 ---
 
@@ -385,7 +383,7 @@ Cierre breve. No recapitular — ya saben lo que hay que hacer. Solo reforzar qu
 - Badges numéricos grandes: display serif o display bold muy pesado.
 
 **Sobre el tono:**
-- Argentino/rioplatense directo. "Arranquemos", "Cada squad con SU cuenta", "Si dudás es NO-GO".
+- Argentino/rioplatense directo. "Arranquemos", "Un squad, una lente", "Si dudás es NO-GO".
 - Sin corporativismo. Sin "alineamiento estratégico". Sin "stakeholders".
 - Cada slide tiene que poder leerse en 20–30 segundos.
 

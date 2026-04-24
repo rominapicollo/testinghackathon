@@ -5,7 +5,7 @@
 
 ## 1. Objetivo
 
-En 75 minutos, con cada squad testeando el prototipo con una cuenta real que ya conocen, validar si el Plan de Cuenta ABE está listo para ir a producción piloto. El responsable de GTM Engineering está en la sala aplicando arreglos en vivo entre bloques, así que el hackathon funciona como un mini ciclo de iteración comprimido: testear → reportar → arreglar → retestear → decidir.
+En 75 minutos, con cada squad testeando el prototipo vacío de forma funcional, validar si el Plan de Cuenta ABE está listo para ir a producción piloto. El responsable de GTM Engineering está en la sala aplicando arreglos en vivo entre bloques, así que el hackathon funciona como un mini ciclo de iteración comprimido: testear → reportar → arreglar → retestear → decidir.
 
 Al cierre, se define:
 - **GO LIVE** (lanzamos piloto con cuentas reales),
@@ -21,13 +21,13 @@ Al cierre, se define:
 | # | Bloque | Duración | Qué hace cada actor |
 |---|---|---|---|
 | 0 | **Kickoff** | 5 min | Facilitador presenta objetivo, reglas, plantilla. Equipos se ubican. |
-| 1 | **Smoke Test común** | 8 min | Equipos corren el smoke con su cuenta. Cargan primeros hallazgos. |
+| 1 | **Smoke Test común** | 8 min | Equipos corren el smoke sobre el prototipo vacío. Cargan primeros hallazgos. |
 | — | **🔧 Pitstop 1** | 4 min | Scriba consolida. Responsable de GTM Engineering recibe **Batch 1** y arranca. |
-| 2 | **Script · Primera mitad** (Setup + Financials) | 18 min | Equipos cargan Ficha/Squad/Contexto/Métricas/Nómina. |
+| 2 | **Script · Primera mitad** (Setup + Nómina) | 18 min | Equipos cargan Ficha/Squad/Contexto/Nómina. |
 | — | **🔧 Pitstop 2** | 5 min | Ronda rápida. Responsable de GTM Engineering entrega Batch 1 terminado, recibe Batch 2. |
 | 3 | **Script · Segunda mitad + Retest** | 20 min | Equipos cargan las secciones restantes y retestean fixes del Batch 1. |
 | — | **🔧 Pitstop 3** | 3 min | Último batch entregado al responsable de GTM Engineering. |
-| 4 | **Cierre · GO/NO-GO + Backlog** | 12 min | Votación con rúbrica. Consolidación del backlog P0/P1/P2. |
+| 4 | **Cierre · Backlog + decisión** | 12 min | Consolidación del backlog P0/P1/P2. Modalidad A: votación GO/CONDICIONAL/NO-GO con rúbrica. Modalidad B: entrega asincrónica al Responsable de GTM Engineering. |
 
 **Total: 75 min.**
 
@@ -35,12 +35,11 @@ Al cierre, se define:
 
 ## 3. Cómo se dividen los equipos
 
-- **1 equipo = 1 squad de cuenta real.** No hay personas artificiales, no hay casos ficticios: cada squad testea con **su propia cuenta**, la que conocen de memoria.
-- 2–4 personas por equipo, idealmente con el AD del squad presente.
+- **1 equipo = 1 squad.** Cada squad arma su equipo con **AD + CS**, y suma un rol de apoyo (Growth Developer, Delivery Lead, etc.) solo si hace falta.
 - El squad decide internamente quién escribe los hallazgos y quién carga datos — pero todos tocan el prototipo.
-- Si un squad tiene varias cuentas, eligen **una sola** para el hackathon (la más representativa, no la más simple).
+- Todos los equipos testean sobre el **prototipo vacío** con datos de prueba cargados en vivo. No se traen datos reales de cuentas propias: el testing es funcional.
 
-Esto tiene dos ventajas importantes. Primero, los hallazgos son complementarios sin diseñarlo así: una cuenta Mature estresa la nómina, una Customer estresa la Ficha, una Strategic estresa Expansión y Contrapartes. Naturalmente se cubre todo el prototipo sin asignar secciones. Y segundo, los hallazgos son reales: no son bugs de "¿y si alguien cargara 200 Acidians?", son problemas que aparecen con los datos del lunes.
+La ventaja de dividir por squad no está en la diversidad de datos — es la misma planilla vacía para todos — sino en la **diversidad de lente**: cada dupla AD + CS evalúa el prototipo desde su propia forma de trabajar. Lo que para un squad es un flujo natural, para otro es un paso que falta. Esas diferencias de lectura son el hallazgo.
 
 ---
 
@@ -60,7 +59,7 @@ Buena regla: el responsable de GTM Engineering ataca primero **bloqueadores con 
 
 ## 5. Script por bloque
 
-Cada squad trabaja con **su cuenta real**. El script es el mismo para todos; lo que cambia son los datos.
+Cada squad trabaja sobre el **prototipo vacío** con datos de prueba cargados en vivo. El script es el mismo para todos.
 
 ### Bloque 1 · Smoke Test común (8 min)
 
@@ -72,10 +71,9 @@ Sirve para verificar que el prototipo carga en todas las máquinas y para calibr
 | S.2 | Hacer click en cada una de las 12 tabs (00–11) | Cambia la sección. Ninguna queda en blanco ni tira error |
 | S.3 | Completar Cliente / Squad / Quarter en Ficha | Header superior se actualiza en vivo (título + chips) |
 | S.4 | Seleccionar Madurez = Growth y Tier = B | Chips cambian. Aparece descripción debajo de cada botón |
-| S.5 | En Métricas, llenar Revenue=100000, Margen=35 | DPRR se calcula a 35% y se refleja en header y sección |
-| S.6 | Click en los 3 links externos (CRM / Kanban / Looker) | Muestran alert "Próximamente" (comportamiento esperado, no bug) |
+| S.5 | Click en los 3 links externos (CRM / Kanban / Looker) | Muestran alert "Próximamente" (comportamiento esperado, no bug) |
 
-**Si S.1–S.5 falla en algún equipo → bloqueador automático para GO LIVE, se reporta.**
+**Si S.1–S.4 falla en algún equipo → bloqueador automático para GO LIVE, se reporta.**
 
 ### 🔧 Pitstop 1 (4 min)
 
@@ -84,22 +82,19 @@ Sirve para verificar que el prototipo carga en todas las máquinas y para calibr
 - **Responsable de GTM Engineering:** recibe el batch, define qué ataca primero.
 - **Equipos:** mientras, leen el script de la primera mitad.
 
-### Bloque 2 · Script · Primera mitad (18 min) — Setup + Financials
+### Bloque 2 · Script · Primera mitad (18 min) — Setup + Nómina
 
-Foco: completar la estructura base del plan con datos reales. Cubre 5 secciones.
+Foco: completar la estructura base del plan con datos de prueba. Cubre 4 secciones.
 
 **Pasos a ejecutar en orden:**
 
-1. **01 · Ficha** — completar todos los campos con datos reales de la cuenta elegida. Probar los 4 botones de Madurez y los 4 de Tier para ver si las descripciones son útiles.
-2. **02 · Squad ABE** — cargar los roles reales. Usar el botón **"+ agregar"** para sumar 1 Client Success, 1 Growth Developer, 1 Delivery Lead adicionales.
-3. **03 · Contexto estratégico** — completar al menos 4 de las 8 áreas de madurez digital con notas reales. Probar el selector Alto/Medio/Bajo.
-4. **04 · Métricas** — cargar Revenue mensual, Margen, posiciones activas, churn %, NRR, share of wallet, pipeline. Verificar que el DPRR del header coincide con el de la sección.
-5. **05 · Nómina** — cargar al menos **5 Acidians reales** (se pueden usar iniciales si se prefiere no cargar nombres completos). Probar el botón "+ agregar Acidian". Verificar que el resumen superior (Acidians activos / Renta total / Costo total / Margen) se calcula bien.
+1. **01 · Ficha** — completar todos los campos con datos de prueba. Probar los 4 botones de Madurez y los 4 de Tier para ver si las descripciones son útiles.
+2. **02 · Squad ABE** — cargar roles de prueba. Usar el botón **"+ agregar"** para sumar 1 Client Success, 1 Growth Developer, 1 Delivery Lead adicionales.
+3. **03 · Contexto estratégico** — completar al menos 4 de las 8 áreas de madurez digital con notas de prueba. Probar el selector Alto/Medio/Bajo.
+4. **05 · Nómina** — cargar al menos **5 Acidians de prueba** (iniciales o nombres ficticios). Probar el botón "+ agregar Acidian". Verificar que el resumen superior (Acidians activos / Renta total / Costo total / Margen) se calcula bien.
 
 **Qué mirar con lupa:**
-- ¿Se puede completar todo sin volver atrás? ¿La numeración 01→05 acompaña el flujo natural?
-- ¿La renta total de Nómina cuadra con el Revenue de Métricas? ¿O hay doble captura?
-- ¿El DPRR se actualiza cuando cargás Nómina, o solo cuando movés Revenue/Margen en Métricas?
+- ¿Se puede completar todo sin volver atrás? ¿La numeración salteando 04 genera confusión?
 - Al agregar filas/tarjetas, ¿se pierde el foco? ¿Se preservan los datos ya cargados arriba?
 - Placeholders: ¿dan ejemplos útiles o son genéricos?
 
@@ -115,12 +110,12 @@ Foco: secciones operacionales + confirmación de fixes del Batch 1. Cubre 6 secc
 
 **Pasos a ejecutar (≈ 3 min por sección):**
 
-6. **06 · Contrapartes** — cargar al menos 3 contrapartes reales con Tier (T1/T2/T3), estado Q anterior, estado Q actual, share of wallet.
-7. **07 · Churn** — cargar 1–2 registros de salidas reales del último trimestre (si las hay). Marcar "¿Es churn? Sí/No" y verificar que los contadores del tope actualizan.
-8. **08 · Expansión** — cargar 2 hipótesis de farming reales (unidad, sponsor, propuesta, orden de magnitud).
+6. **06 · Contrapartes** — cargar al menos 3 contrapartes de prueba con Tier (T1/T2/T3), estado Q anterior, estado Q actual, share of wallet.
+7. **07 · Churn** — cargar 1–2 registros de salidas de prueba. Marcar "¿Es churn? Sí/No" y verificar que los contadores del tope actualizan.
+8. **08 · Expansión** — cargar 2 hipótesis de farming de prueba (unidad, sponsor, propuesta, orden de magnitud).
 9. **09 · Rentabilidad y salud** — cargar el semáforo de salud (verde/amarillo/rojo) para 3 Acidians. Ver si los contadores de arriba suman bien.
 10. **10 · Stack tecnológico** — revisar si las tecnologías prellenadas tienen sentido. Agregar 1 área nueva con "+ agregar área".
-11. **11 · Competencia** — cargar 1–2 vendors reales y 2 gerencias con Share of Wallet estimado.
+11. **11 · Competencia** — cargar 1–2 vendors de prueba y 2 gerencias con Share of Wallet estimado.
 
 **Retest obligatorio al final (≈ 3 min):**
 - El facilitador le pregunta al responsable de GTM Engineering qué fixes aplicó del Batch 1.
@@ -139,7 +134,13 @@ Foco: secciones operacionales + confirmación de fixes del Batch 1. Cubre 6 secc
 - **Scriba:** cierra la planilla, deduplica hallazgos repetidos.
 - **Responsable de GTM Engineering:** si hay un fix trivial que alcanza a aplicar, adelante; si no, lo deja documentado como P0.
 
-### Bloque 4 · Cierre · GO/NO-GO + Backlog (12 min)
+### Bloque 4 · Cierre (12 min)
+
+El facilitador define **antes** del hackathon cuál de las dos modalidades se usa. Se comunica en el kickoff.
+
+#### Modalidad A · Decisión en vivo (GO / CONDICIONAL / NO-GO)
+
+Ideal cuando hay urgencia por tener una respuesta clara al cierre de la sesión.
 
 **Minuto 0–4 · Consolidación en pantalla.** El scriba proyecta la planilla. Pasan por la columna de severidad y ajustan si dos equipos reportaron lo mismo con severidades distintas.
 
@@ -151,6 +152,16 @@ Foco: secciones operacionales + confirmación de fixes del Batch 1. Cubre 6 secc
 - **P2** — backlog general (menores + nice-to-have).
 
 **Minuto 10–12 · Cierre.** Lámina final con: decisión, conteo de P0/P1/P2, dueño de cada P0, fecha del siguiente hito.
+
+#### Modalidad B · Cierre con backlog, decisión asincrónica
+
+Ideal cuando no hay urgencia por una decisión en vivo y se prefiere dar tiempo al Responsable de GTM Engineering para digerir los hallazgos y definir el próximo hito con cabeza fría.
+
+**Minuto 0–6 · Consolidación en pantalla.** El scriba proyecta la planilla. Pasan por la columna de severidad y ajustan si dos equipos reportaron lo mismo con severidades distintas.
+
+**Minuto 6–10 · Priorización del backlog.** Se agrupan los hallazgos no resueltos en P0 / P1 / P2 (mismos criterios que en la Modalidad A).
+
+**Minuto 10–12 · Cierre.** Los squads entregan el backlog consolidado al Responsable de GTM Engineering. **No hay votación.** El GTM define en un plazo acordado (ej: 48-72 hs) cuándo lanza la siguiente iteración y con qué alcance.
 
 ---
 
@@ -180,6 +191,8 @@ Archivo compartido (Google Sheet convertido desde el xlsx que se entrega con est
 ---
 
 ## 7. Rúbrica GO / GO CONDICIONAL / NO-GO
+
+> Los niveles de severidad aplican a ambas modalidades de cierre. Los criterios de votación y los resultados aplican solo a la **Modalidad A**. En la Modalidad B no hay votación: el Responsable de GTM Engineering toma la decisión asincrónicamente a partir del backlog entregado.
 
 ### Niveles de severidad
 
@@ -218,7 +231,7 @@ Cada squad, antes de votar, contesta honestamente:
 | **Facilitador** | Dueño del tiempo. Rota entre equipos. Corta discusiones fuera de script. Moderará la votación final. | 1 |
 | **Scriba** | Consolida hallazgos en la planilla en vivo. Deduplica. Proyecta en pantalla en los pitstops. | 1 |
 | **Responsable de GTM Engineering** | Aplica fixes en vivo entre bloques. Recibe batches en los pitstops. No defiende el diseño. | 1 |
-| **Equipo (por squad)** | Testea con su cuenta real. Completa la planilla. Vota al cierre. | 1 squad por equipo |
+| **Equipo (por squad)** | Testea el prototipo funcionalmente con datos de prueba. Completa la planilla. Vota al cierre (solo en Modalidad A). | 1 squad por equipo (AD + CS + rol de apoyo opcional) |
 
 ---
 
@@ -243,21 +256,6 @@ Cada squad, antes de votar, contesta honestamente:
 - [ ] Tickets P0 abiertos en el board del equipo con dueño
 - [ ] Comunicación al CCO con el resultado
 - [ ] Fecha agendada del siguiente hito (piloto o próximo hackathon)
-
----
-
-## 10. Riesgos conocidos (seeds) — uso interno del facilitador
-
-Puntos que ya se detectaron en revisión técnica del prototipo. **No mencionarlos en kickoff.** Si ningún squad los encuentra, es un hallazgo meta sobre la rúbrica.
-
-1. Selector de margen en Nómina: las opciones **"Crítico (30-40%)"** y **"Estable (30-40%)"** tienen el mismo rango — ambigüedad de clasificación.
-2. Los 3 links externos (CRM / Kanban / Looker) muestran `alert("Próximamente")` — ¿aceptable para piloto?
-3. **Sin persistencia** — un F5 pierde todo el plan. ¿Cómo se resuelve para piloto?
-4. El **DPRR del header** solo se actualiza al editar Revenue/Margen en Métricas, no al cargar Nómina. Posible inconsistencia visible.
-5. **Integración con Looker** se menciona como fuente, pero es captura manual. ¿Flujo definido para producción?
-6. La **Guía de uso (00)** es larga — validar si los placeholders de campos se bastan solos.
-7. No hay **validación de rangos** en campos numéricos (margen negativo, porcentajes >100, etc.).
-8. **Responsive / mobile** no está probado — el squad también trabaja desde el celular.
 
 ---
 
