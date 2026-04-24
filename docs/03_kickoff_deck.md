@@ -1,392 +1,278 @@
-# Hackathon de Testing · Account Plan ABE v9 — Deck (contenido)
+# Hackathon de Testing · Account Plan ABE v9 — Script de kickoff
 
-**Formato:** contenido slide-by-slide para armar en tu propio sistema de diseño.
-**Total de slides:** 14.
-**Duración sugerida del kickoff:** 5–8 min (pasar todo en ~30 seg por slide).
+**Uso:** este documento es el guion del kickoff. El facilitador lo lee, lo internaliza, o lo lleva impreso para apoyarse.
+**Total de slides:** 15.
+**Duración total del kickoff:** ~9–10 min (aprox. 35–45 seg por slide).
 **Idioma:** español rioplatense, tono directo.
 
-Cada slide tiene título, subtítulo, cuerpo y notas del presentador. El cuerpo está estructurado para que sea fácil de parsear — listas, tablas, y bloques con etiquetas claras.
+**Antes del kickoff, el facilitador tiene que haber decidido la Modalidad de cierre (A o B, ver §8 del documento de diseño).** El guion tiene bifurcaciones marcadas según la modalidad elegida.
 
-**Paleta de referencia** (la del prototipo, opcional):
-`navy #1A1A2E` · `deep-navy #16213E` · `accent-blue #0066CC` · `green #1D9E75` · `amber #BA7517` · `red #C0392B` · `light-bg #F5F5F7` · `dark-text #1D1D1F` · `muted #6E6E73`
-
-**Motivo visual recomendado:** chip numerado de slide arriba-derecha, barra vertical de acento izquierda en covers, cards con color de estado para niveles (GO/CONDICIONAL/NO-GO, severidades).
+**Paleta de referencia** (opcional, para quien arma el deck): navy `#1A1A2E` · deep-navy `#16213E` · accent-blue `#0066CC` · green `#1D9E75` · amber `#BA7517` · red `#C0392B` · light-bg `#F5F5F7` · dark-text `#1D1D1F` · muted `#6E6E73`.
 
 ---
 
 ## Slide 1 · Cover
 
-**Layout:** dark cover full-bleed · título grande · 3 cards framing questions en el pie.
+**Qué muestra:** Cover oscuro full-bleed. Kicker "HACKATHON DE TESTING". Título grande "Account Plan ABE · v9". Subtítulo: *1h 15min · 1 squad = 1 equipo · Responsable de GTM Engineering aplicando fixes en vivo*. Tres cards al pie con las preguntas clave (¿Funciona? ¿Sirve? ¿Se entiende?).
 
-**Kicker (eyebrow):** HACKATHON DE TESTING
-**Título principal:** Account Plan ABE · v9
-**Subtítulo:** 1h 15min · 1 squad = 1 equipo · Responsable de GTM Engineering aplicando fixes en vivo
+**Guion:**
 
-**Cards (3, en pie de slide):**
-
-| Pregunta | Respuesta |
-|---|---|
-| ¿Funciona? | Se puede completar un plan sin romper nada |
-| ¿Sirve? | Resuelve preguntas del día a día del squad |
-| ¿Se entiende? | Un rol nuevo lo usa sin tutorial |
-
-**Notas del presentador:**
-En 75 minutos, testeando el prototipo vacío de forma funcional, vamos a responder estas tres preguntas. Al cierre (o asincrónicamente, según la modalidad elegida), decidimos si el prototipo sale a producción piloto o qué le falta resolver primero.
+> Buenas. Arrancamos el hackathon de testing del Account Plan ABE, versión 9.
+>
+> En los próximos 75 minutos vamos a testear juntos el prototipo — vacío, de forma funcional — y vamos a responder tres preguntas concretas: ¿funciona?, ¿sirve?, ¿se entiende?
+>
+> Hoy somos squads trabajando en duplas de AD y CS, con algún rol de apoyo si hace falta. Y tenemos al responsable de GTM Engineering en la sala, aplicando fixes en vivo entre bloques. Eso es lo que hace distinto a este hackathon.
 
 ---
 
 ## Slide 2 · Por qué estamos acá
 
-**Layout:** texto intro + 3 cards horizontales apilados con color de estado.
+**Qué muestra:** Intro corta. Dos cards horizontales apilados, una por modalidad de cierre (A en azul, B en verde). Indicador visual grande de cuál está activa hoy.
 
-**Número de slide:** 01
-**Título:** Por qué estamos acá
+**Guion:**
 
-**Intro:**
-El prototipo del Plan de Cuenta ABE está listo para revisión. En los próximos 75 minutos vamos a decidir si va a producción piloto o qué le falta resolver primero.
-
-**Subtítulo pre-cards:** Al cierre, votamos entre 3 resultados.
-
-**Cards (3, con barra de color lateral):**
-
-| Color | Tag | Descripción |
-|---|---|---|
-| 🟢 verde | ✅ GO LIVE | Todos los squads votan GO. Arranca piloto con 2–3 cuentas reales. |
-| 🟡 ámbar | 🟡 GO CONDICIONAL | Mayoría GO pero queda backlog P0 con dueño y fecha. Una vez resuelto, habilita piloto. |
-| 🔴 rojo | 🔴 NO-GO | Mayoría NO-GO o >3 bloqueadores abiertos. Vuelve a iteración. Nuevo hackathon en 2 semanas. |
-
-**Notas del presentador:**
-No es "aprobemos y salimos". Es "decidimos juntos con evidencia". La diferencia entre GO CONDICIONAL y NO-GO es si el backlog P0 se puede cerrar en días o requiere iteración estructural.
+> El prototipo está listo para revisión. Hoy, con la evidencia que juntemos entre todos, decidimos si va a producción piloto o qué le falta resolver primero.
+>
+> Hay dos formas de cerrar la actividad y la definí antes del kickoff. Te cuento cuál es cuál y después confirmo con cuál vamos hoy:
+>
+> - **Modalidad A — Decisión en vivo.** Al final del hackathon, cada squad emite un voto con rúbrica: GO, GO CONDICIONAL o NO-GO. Nos vamos con la respuesta clara.
+> - **Modalidad B — Cierre con backlog.** No votamos. Consolidamos todos los hallazgos, se los entregamos al responsable de GTM Engineering, y él define asincrónicamente — en 48 a 72 horas — cuándo lanza la próxima iteración.
+>
+> Hoy vamos con la **Modalidad [A / B]**.
 
 ---
 
 ## Slide 3 · Agenda · 75 minutos
 
-**Layout:** tabla/timeline vertical · filas con número en badge + nombre + duración + descripción · pitstops diferenciados visualmente (fondo ámbar claro + ícono llave).
+**Qué muestra:** Timeline vertical. 4 bloques (Kickoff, Smoke, Primera mitad, Segunda mitad, Cierre) + 3 pitstops diferenciados con fondo ámbar e ícono de llave.
 
-**Número de slide:** 02
-**Título:** Agenda · 75 minutos
-**Subtítulo:** 4 bloques de testing + 3 pitstops donde el responsable de GTM Engineering aplica fixes en vivo
+**Guion:**
 
-**Timeline:**
-
-| # | Bloque | Duración | Descripción |
-|---|---|---|---|
-| 0 | Kickoff | 5 min | Contexto, reglas, presentación de equipos |
-| 1 | Smoke Test común | 8 min | 6 steps básicos · calibra severidad entre equipos |
-| 🔧 | **Pitstop 1** | 4 min | Responsable de GTM Engineering recibe Batch 1 y arranca fixes |
-| 2 | Script · Primera mitad | 18 min | Ficha, Squad, Contexto, Nómina (4 secciones) |
-| 🔧 | **Pitstop 2** | 5 min | Fixes del Batch 1 listos · se entrega Batch 2 |
-| 3 | Script · Segunda mitad + Retest | 20 min | Secciones 06–11 + retest de fixes del Batch 1 |
-| 🔧 | **Pitstop 3** | 3 min | Último batch · scriba cierra planilla |
-| 4 | Cierre · GO/NO-GO | 12 min | Votación con rúbrica · consolidación del backlog P0/P1/P2 |
-
-**Notas del presentador:**
-Los pitstops son sagrados. Sin pitstop, el responsable de GTM Engineering no arregla nada en vivo. La duración parece ajustada pero es real: lo calibramos para que no corra nadie.
+> Este es el recorrido. 5 minutos de kickoff — lo que estoy haciendo ahora —, 8 minutos de smoke test para calibrar, 18 minutos de script de primera mitad, 20 de segunda mitad con retest, y 12 de cierre.
+>
+> Entre bloque y bloque hay pitstops. En cada uno, el scriba consolida los hallazgos y se los entrega al responsable de GTM Engineering. Él arranca a aplicar fixes mientras ustedes siguen testeando en el bloque siguiente.
+>
+> Dos cosas importantes: los pitstops son sagrados — sin pitstop no hay fixes aplicados. Y la duración parece justa, pero está calibrada para que no corra nadie. Si me ven cortando discusiones, es por esto.
 
 ---
 
 ## Slide 4 · Los equipos · 1 squad = 1 equipo
 
-**Layout:** 2 columnas · izquierda con fondo light (Cómo funciona) · derecha con fondo dark (Por qué así).
+**Qué muestra:** Dos columnas. Izquierda (fondo claro): cómo funciona. Derecha (fondo oscuro): tres bloques con subtítulo + descripción explicando por qué así.
 
-**Número de slide:** 03
-**Título:** Los equipos · 1 squad = 1 equipo
-**Subtítulo:** Cada squad testea el prototipo vacío funcionalmente · mismo script y datos de prueba para todos · lo que cambia es la lente
+**Guion:**
 
-**Columna izquierda · "Cómo funciona" (lista):**
-- Equipo por squad: **AD + CS** · se suma un rol de apoyo si hace falta
-- Todos tocan el prototipo · el squad decide internamente quién carga y quién toma notas
-- Testing funcional sobre el prototipo vacío · datos de prueba cargados en vivo
-- Mismo script común para todos los equipos
-
-**Columna derecha · "Por qué así" (3 bloques con subtítulo + descripción):**
-
-| Subtítulo | Descripción |
-|---|---|
-| Diversidad de lente | Cada squad trabaja diferente. Lo que para un AD es un flujo natural, para otro es un paso que falta. Esas diferencias de lectura son el hallazgo. |
-| Hallazgos de uso real | No son bugs de "¿y si alguien cargara 200 Acidians?". Son los roces que el squad va a tener cuando use esto el lunes con sus datos. |
-| Expertise en la sala | El AD y el CS conocen el día a día del squad como nadie. Detectan ausencias y redundancias que alguien de afuera no vería. |
-
-**Notas del presentador:**
-La división por squads no es aleatoria. Es la forma más rápida de cubrir todo el prototipo con perspectivas distintas. El prototipo es el mismo para todos — lo que cambia es quién lo está mirando.
+> Cómo se organizan los equipos: 1 squad = 1 equipo. Cada squad arma su equipo con **AD y CS**. Si necesitan sumar un rol de apoyo — un Growth Developer, un Delivery Lead, alguien más del squad — sumen. Pero el core es AD + CS.
+>
+> Importante: **todos testean sobre el prototipo vacío**, con datos de prueba cargados en vivo. No se traen datos reales de sus cuentas. El testing es funcional.
+>
+> Entonces, ¿para qué los dividimos en squads si todos tienen el mismo prototipo y los mismos datos de prueba? Por **diversidad de lente**. Cada squad trabaja diferente. Lo que para un AD es un flujo natural, para otro es un paso que falta. Esas diferencias de lectura son el hallazgo.
 
 ---
 
 ## Slide 5 · El responsable de GTM Engineering en vivo
 
-**Layout:** 5 pasos del flujo en horizontal (bloques alternando colores) + 2 columnas abajo (Sí hace / No hace).
+**Qué muestra:** Flujo horizontal de 5 pasos (Equipos testean → Pitstop → GTM arregla → Pitstop → Retest). Abajo, dos columnas: Qué SÍ hace (borde verde) / Qué NO hace (borde rojo).
 
-**Número de slide:** 04
-**Título:** El responsable de GTM Engineering en vivo · la novedad de este hackathon
-**Subtítulo:** Mini ciclo de iteración comprimido en 75 min: testear → reportar → arreglar → retestear → decidir
+**Guion:**
 
-**Flujo horizontal (5 bloques):**
-1. Equipos testean *(color: azul light)*
-2. Pitstop → *(color: ámbar light)*
-3. Responsable de GTM Engineering arregla *(color: verde light)*
-4. Pitstop → *(color: ámbar light)*
-5. Retest *(color: azul light)*
-
-**Dos columnas en mitad inferior:**
-
-**✓ Qué SÍ hace** *(card con borde verde):*
-- Recibe batches en los 3 pitstops (no lee hallazgos sueltos durante bloques)
-- Prioriza bloqueadores y mayores con fix corto y acotado
-- Aplica fixes en paralelo mientras los equipos siguen testeando
-- Avisa al facilitador cuando un fix está listo para retestear
-
-**✗ Qué NO hace** *(card con borde rojo):*
-- No testea · no participa en los equipos
-- No se defiende · si preguntan "¿por qué está así?", el facilitador corta
-- No ataca reestructuraciones grandes (persistencia, integración Looker) — eso queda como P0 post-hackathon
-- No improvisa fuera de los batches asignados
-
-**Notas del presentador:**
-Esta es la diferencia clave de este hackathon. La regla de oro es: el responsable de GTM Engineering ataca primero bloqueadores con fix corto y acotado. Nada de refactorear en vivo.
+> Esta es la novedad del hackathon. El responsable de GTM Engineering está en la sala. **No testea, no participa en los equipos, no se defiende.** Su trabajo en los 75 minutos es recibir batches de hallazgos en los pitstops y aplicar fixes en paralelo mientras ustedes siguen testeando.
+>
+> Regla de oro: ataca primero bloqueadores con fix corto. Nada de refactorear en vivo. Las cosas grandes — persistencia, integraciones — van al backlog como P0, no se intentan hoy.
+>
+> Y si alguien le pregunta "¿por qué está así?" durante el testing, yo corto. La discusión de diseño viene después. Hoy capturamos.
 
 ---
 
 ## Slide 6 · Principios del testing
 
-**Layout:** grid 2×3 · cards con barra vertical azul a la izquierda · título bold + descripción muted/italic.
+**Qué muestra:** Grid 2×3 con los 6 principios. Cards con barra azul a la izquierda, título en bold, descripción muted.
 
-**Número de slide:** 05
-**Título:** Principios del testing
+**Guion:**
 
-**6 principios (2 columnas × 3 filas):**
-
-| # | Principio | Descripción |
-|---|---|---|
-| 1 | Usen el prototipo como lo usarían el lunes a las 9am. | No es QA manual exhaustivo. Es testing funcional con datos de prueba representativos. |
-| 2 | Si algo les hace fruncir el ceño, anótenlo. | La fricción es un hallazgo válido aunque nada esté "roto". |
-| 3 | Un hallazgo = una fila. | Síntoma observable + sección + severidad. Sin ensayo literario. |
-| 4 | Prohibido decir "quedaría lindo si…" | …sin decir qué problema concreto resuelve. |
-| 5 | No discutir soluciones durante testing. | Solo capturar. El diseño viene después con el responsable de GTM Engineering y el facilitador. |
-| 6 | Hallazgo repetido = señal fuerte. | Si dos squads reportan lo mismo, no es ruido — es prioridad. |
-
-**Notas del presentador:**
-El principio 5 es el más difícil de respetar. Cuando alguien encuentra algo, la tentación es debatir cómo arreglarlo. Córtenlo. Ese tiempo lo necesitamos después.
-
----
-
-## Slide 7 · Bloque 1 · Smoke Test común
-
-**Layout:** tabla de 3 columnas con header dark · filas alternadas light/white · caja de alerta roja al pie.
-
-**Número de slide:** 06
-**Título:** Bloque 1 · Smoke Test común · 8 min
-**Subtítulo:** 6 steps rápidos · verifica que el prototipo carga en todas las máquinas y calibra severidad entre equipos
-
-**Tabla:**
-
-| # | Acción | Resultado esperado |
-|---|---|---|
-| S.1 | Abrir el HTML en Chrome | Header oscuro visible · 12 tabs · sección Ficha activa |
-| S.2 | Click en cada una de las 12 tabs (00–11) | Cambia la sección · ninguna queda en blanco ni tira error |
-| S.3 | Completar Cliente / Squad / Quarter en Ficha | El header superior se actualiza en vivo (título + chips) |
-| S.4 | Elegir Madurez = Growth y Tier = B | Chips cambian · aparece descripción debajo de cada botón |
-| S.5 | Click en los 3 links externos (CRM / Kanban / Looker) | Alert "Próximamente" · comportamiento esperado, NO bug |
-
-**Caja de alerta (rojo):**
-⚠ Si S.1 a S.4 falla en algún equipo → bloqueador automático para GO LIVE. Se reporta y se sigue con el resto del hackathon.
-
-**Notas del presentador:**
-El smoke sirve para dos cosas: verificar que todos arrancan bien y que todos clasifican severidad con el mismo criterio. Si alguien dice "menor" de un bug que otros reportan como "bloqueador", hay que alinear ahora.
+> Seis principios, rápido.
+>
+> Uno: usen el prototipo como lo usarían el lunes a las 9 de la mañana. No es QA manual exhaustivo — es testing funcional.
+>
+> Dos: si algo les hace fruncir el ceño, anótenlo. La fricción es un hallazgo válido aunque nada esté técnicamente roto.
+>
+> Tres: un hallazgo, una fila. Sin ensayo literario.
+>
+> Cuatro: prohibido decir "quedaría lindo si..." sin decir qué problema concreto resuelve.
+>
+> Cinco — este es el más difícil: no discutir soluciones durante testing. Solo capturar. El diseño viene después con el responsable de GTM Engineering. Si los veo debatiendo cómo arreglar algo, corto.
+>
+> Seis: hallazgo repetido es señal fuerte, no ruido. Si dos squads reportan lo mismo, es prioridad.
 
 ---
 
-## Slide 8 · Bloque 2 · Script · Primera mitad
+## Slide 7 · Bloque 1 · Smoke Test · 8 min
 
-**Layout:** lista de 5 "section cards" (número grande en badge dark + nombre bold + descripción muted) · caja de "Mirar con lupa" al pie.
+**Qué muestra:** Tabla de 3 columnas con 5 acciones (S.1 a S.5) y resultado esperado. Caja de alerta roja al pie.
 
-**Número de slide:** 07
-**Título:** Bloque 2 · Script · Primera mitad · 18 min
-**Subtítulo:** Setup + Nómina · 4 secciones · prototipo vacío con datos de prueba
+**Guion:**
 
-**Secciones a testear (cada una con badge numérico):**
-
-| N° | Sección | Tarea |
-|---|---|---|
-| 01 | Ficha | Completar todos los campos con datos de prueba · probar los 4 botones de Madurez y los 4 de Tier |
-| 02 | Squad ABE | Cargar roles de prueba · usar "+ agregar" para sumar 1 CS, 1 GD, 1 DL adicionales |
-| 03 | Contexto | Completar al menos 4 de las 8 áreas de madurez digital con notas de prueba · probar selector Alto/Medio/Bajo |
-| 05 | Nómina | Cargar al menos 5 Acidians de prueba (iniciales o nombres ficticios) · probar "+ agregar" · verificar resumen superior |
-
-**Caja "🔍 Mirar con lupa" (pie de slide, fondo light):**
-¿Se pierde el foco al agregar filas? · ¿Los placeholders dan ejemplos útiles? · ¿La numeración salteando 04 genera confusión?
-
-**Notas del presentador:**
-En este bloque se carga la estructura base del plan. Ojo con las inconsistencias entre secciones — es donde más van a aparecer.
+> Arrancamos con un smoke test común de 8 minutos. Son 5 pasos rápidos.
+>
+> Sirven para dos cosas: verificar que el prototipo carga bien en todas las máquinas, y calibrar entre equipos cómo clasificamos severidad. Si alguien dice "menor" a un bug que otros reportan como "bloqueador", lo alineamos ahora.
+>
+> Los 4 primeros pasos son los críticos. **Si alguno falla en algún equipo, es bloqueador automático para GO LIVE**, se reporta y seguimos. El paso 5 es clickear los 3 links externos — CRM, Kanban, Looker. Esos muestran un alert "Próximamente". Eso es comportamiento esperado, no es un bug.
 
 ---
 
-## Slide 9 · Bloque 3 · Script · Segunda mitad + Retest
+## Slide 8 · Bloque 2 · Primera mitad · 18 min
 
-**Layout:** lista de 6 section cards (más compacta que slide 8) · caja azul de retest al pie.
+**Qué muestra:** 4 section cards (badge numérico + nombre + tarea). Caja "Mirar con lupa" al pie.
 
-**Número de slide:** 08
-**Título:** Bloque 3 · Segunda mitad + Retest · 20 min
-**Subtítulo:** Operación y estrategia · 6 secciones · ≈3 min cada una · + retest de fixes del Batch 1
+**Guion:**
 
-**Secciones a testear:**
+> Entramos al bloque de verdad. 18 minutos para cargar la estructura base del plan. Son 4 secciones: **01 Ficha, 02 Squad, 03 Contexto, 05 Nómina**.
+>
+> Van a notar que saltamos el 04. Esa sección la dejamos fuera del script hoy. Miren si esa ausencia les genera confusión — es parte de lo que queremos saber.
+>
+> Datos de prueba, no reales: iniciales, nombres ficticios, valores representativos. Lo que importa no son los números, sino si el flujo cierra.
+>
+> Qué mirar con lupa: si se pierde el foco al agregar filas, si los placeholders dan ejemplos útiles, y si saltar el 04 genera ruido.
 
-| N° | Sección | Tarea |
-|---|---|---|
-| 06 | Contrapartes | Al menos 3 contrapartes de prueba con Tier, estado Q anterior, estado Q actual, share of wallet |
-| 07 | Churn | 1–2 registros de salidas de prueba · marcar Churn Sí/No · verificar contadores del tope |
-| 08 | Expansión | 2 hipótesis de farming de prueba · unidad, sponsor, propuesta, orden de magnitud |
-| 09 | Salud | Semáforo verde/amarillo/rojo para 3 Acidians · ver si contadores superiores suman bien |
-| 10 | Stack | Revisar tecnologías prellenadas · agregar 1 área nueva con "+ agregar área" |
-| 11 | Competencia | 1–2 vendors de prueba · 2 gerencias con Share of Wallet estimado |
+---
 
-**Caja "🔄 Retest obligatorio al final (≈3 min)" (pie de slide, fondo azul light):**
-El facilitador le pregunta al responsable de GTM Engineering qué fixes del Batch 1 aplicó. Cada equipo retestea sobre el prototipo y actualiza el estado en la planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
+## Slide 9 · Bloque 3 · Segunda mitad + Retest · 20 min
 
-**Notas del presentador:**
-El retest es lo que cierra el loop. Si no retestean, los fixes del responsable de GTM Engineering no bajan la severidad del backlog y la votación final queda falseada.
+**Qué muestra:** 6 section cards (más compactas) + caja azul con el retest obligatorio.
+
+**Guion:**
+
+> 20 minutos para las 6 secciones de operación y estrategia: Contrapartes, Churn, Expansión, Salud, Stack y Competencia. Tres minutos por sección, así que ritmo sostenido.
+>
+> Al final del bloque hay 3 minutos de **retest obligatorio**. Yo les voy a avisar qué fixes aplicó el responsable de GTM Engineering en los pitstops 1 y 2. Ustedes retestean esos puntos y actualizan el estado en su planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
+>
+> Si no retestean, el backlog final queda inflado y la decisión sale con ruido. Es el paso que cierra el loop.
 
 ---
 
 ## Slide 10 · Plantilla de hallazgos
 
-**Layout:** tabla de 3 columnas (Campo, Cómo se llena, Ejemplo) · header dark · caja "Regla del scriba" en ámbar al pie.
+**Qué muestra:** Tabla de 3 columnas (Campo / Cómo se llena / Ejemplo). Caja ámbar con la regla del scriba al pie.
 
-**Número de slide:** 09
-**Título:** Plantilla de hallazgos · una fila por hallazgo
-**Subtítulo:** Google Sheet compartido con todos los squads · lo completan en vivo durante cada bloque
+**Guion:**
 
-**Tabla:**
-
-| Campo | Cómo se llena | Ejemplo |
-|---|---|---|
-| ID | T{squad}-{correlativo} | T1-07 |
-| Squad | Nombre del squad que reporta | Financial Services |
-| Bloque | 1 Smoke · 2 Primera mitad · 3 Segunda mitad | 2 |
-| Sección | 00 a 11, o Transversal | 05 · Nómina |
-| Tipo | Bug · UX · Contenido · Faltante · Inconsistencia · Performance | Bug |
-| Descripción | Qué pasó, en 1–2 líneas | Margen=200 pasa como válido, DPRR se calcula a 200% |
-| Pasos | Pasos mínimos para reproducir | Métricas → Margen → 200 → tab |
-| Severidad | 🔴 Bloqueador · 🟠 Mayor · 🟡 Menor · 🟢 Nice-to-have | 🟠 Mayor |
-| Impacto | A quién afecta, cuánto duele | AD podría reportar DPRR imposible en QBR |
-| Estado | Abierto · En fix · Verificado fix OK · Descartado | En fix |
-
-**Caja "📌 Regla del scriba" (pie de slide, fondo ámbar light):**
-Si dos squads reportan lo mismo, se consolida en UNA fila con ambos IDs (ej: T1-07 / T3-12). Repeticiones = señal fuerte.
-
-**Notas del presentador:**
-Una fila por hallazgo. Sin ensayo literario. Con los pasos para reproducir bien claros, porque el responsable de GTM Engineering los va a leer rápido en los pitstops.
+> Acá cargan los hallazgos. **Una fila por hallazgo.** Sin ensayo literario.
+>
+> Los campos que más importan: descripción breve, pasos para reproducir, sección, severidad. Ojo con los pasos — el responsable de GTM Engineering los va a leer rápido en los pitstops. Si no puede reproducir, no arregla. Sean claros.
+>
+> Regla del scriba: si dos squads reportan lo mismo, se consolida en **una sola fila** con los dos IDs. Repeticiones son señal de prioridad, no duplicación.
 
 ---
 
 ## Slide 11 · Rúbrica de severidad
 
-**Layout:** 4 cards apiladas con barra de color lateral + fondo tintado del mismo color · dot icon + tag + definición + ejemplo (a la derecha, separado).
+**Qué muestra:** 4 cards apiladas con barra de color lateral (rojo, naranja, amarillo, verde) + definición + ejemplo.
 
-**Número de slide:** 10
-**Título:** Rúbrica de severidad
-**Subtítulo:** Consultar antes de clasificar · mejor pecar de crítico que dejar pasar un bloqueador
+**Guion:**
 
-**Niveles:**
-
-| Dot | Nivel | Definición | Ejemplo |
-|---|---|---|---|
-| 🔴 | Bloqueador | Impide usar el prototipo o produce un dato incorrecto que puede tomarse como verdad. | DPRR mal calculado · sección que no carga · pérdida de datos al refrescar |
-| 🟠 | Mayor | Se puede trabajar alrededor, pero genera fricción significativa o riesgo de error humano. | Doble captura de dato · falta de validación · inconsistencia entre secciones |
-| 🟡 | Menor | Incomoda pero no compromete el uso. Cosmético o editorial. | Placeholder genérico · sigla sin definir · alineación de columnas |
-| 🟢 | Nice-to-have | Mejora de ambición, no de corrección. | Autocompletar desde CRM · resumen ejecutivo generado · export PDF |
-
-**Notas del presentador:**
-Si dudan entre dos niveles, suban uno. Mejor un Mayor que resulta ser Menor que al revés. La deduplicación final va a ajustar.
+> Cuatro niveles de severidad. Lo más importante es clasificar con el mismo criterio entre equipos.
+>
+> **Bloqueador, rojo:** impide usar el prototipo o produce un dato incorrecto que se puede tomar como verdad. Ejemplo: un cálculo mal, una sección que no carga.
+>
+> **Mayor, naranja:** se puede trabajar alrededor, pero hay fricción significativa o riesgo de error humano. Ejemplo: doble captura, falta de validación, inconsistencia entre secciones.
+>
+> **Menor, amarillo:** incomoda pero no compromete el uso. Cosmético o editorial.
+>
+> **Nice-to-have, verde:** ambición, no corrección. Ejemplo: un export PDF.
+>
+> Regla simple: si dudan entre dos niveles, **suban uno**. Mejor pecar de crítico. La deduplicación al final va a ajustar.
 
 ---
 
-## Slide 12 · Criterios para votar GO
+## Slide 12 · Modalidad de cierre
 
-**Layout:** 4 filas con badge gigante tipográfico a la izquierda (dark) + pregunta + descripción · alerta roja al pie con regla del veto.
+**Qué muestra:** 2 cards grandes, una por modalidad, lado a lado. Indicador visual claro (tick, flecha, highlight) sobre la modalidad activa del día.
 
-**Número de slide:** 11
-**Título:** Criterios para votar GO
-**Subtítulo:** Antes de votar, cada squad se hace estas 4 preguntas honestamente
+**Guion:**
 
-**Criterios:**
-
-| Umbral (badge grande) | Pregunta | Nota |
-|---|---|---|
-| **0** | ¿Cuántos bloqueadores quedan sin resolver? | Si hay uno solo · no hay GO posible. |
-| **≤ 5** | ¿Cuántos mayores quedan sin resolver? | …y con workaround aceptable documentado. |
-| **≥ 10 / 12** | ¿Cuántas secciones se completan end-to-end sin tutorial? | Si más de 2 secciones requieren aclaración, falta trabajo editorial. |
-| **Sí** | ¿Lo usarías el lunes con tu cuenta real sin avergonzarte? | La pregunta más honesta. Si dudás, es NO-GO. |
-
-**Caja de alerta (rojo, pie):**
-⚠ Veto técnico: un solo equipo puede forzar GO CONDICIONAL si tiene un bloqueador argumentado con pasos reproducibles.
-
-**Notas del presentador:**
-La cuarta pregunta es la más importante. Si algún equipo duda, es NO-GO. No hay presión social para votar GO. El veto técnico protege contra el consenso forzado.
+> Antes de arrancar, clarifico cómo termina la actividad hoy. Ya lo mencioné en el Slide 2, pero lo repito con más detalle porque cambia qué esperar al cierre.
+>
+> Las dos modalidades consolidan el backlog. La diferencia está en si hay decisión en vivo o no.
+>
+> **Modalidad A — Decisión en vivo.** Consolidación en pantalla → votación por squad (GO / CONDICIONAL / NO-GO) con rúbrica → priorización del backlog P0/P1/P2 → cierre con la decisión proyectada.
+>
+> **Modalidad B — Cierre asincrónico.** Consolidación más extendida → priorización del backlog P0/P1/P2 → entrega formal del backlog al responsable de GTM Engineering. **Sin votación.** Él define en 48 a 72 horas cuándo lanza la próxima iteración y con qué alcance.
+>
+> Hoy cerramos con la **Modalidad [A / B]**. [Confirmar claramente.]
 
 ---
 
-## Slide 13 · Roles en la sesión
+## Slide 13 · Criterios para votar GO · solo Modalidad A
 
-**Layout:** 4 cards verticales iguales en fila · dark con círculo azul arriba con número · título Georgia + descripción centrada.
+**Qué muestra:** 4 criterios con badge tipográfico grande a la izquierda (0, ≤5, ≥10/12, Sí) + descripción. Caja roja al pie con la regla del veto técnico.
 
-**Número de slide:** 12
-**Título:** Roles en la sesión
+**Guion (si Modalidad A):**
 
-**Cards (4):**
+> Este slide aplica si cerramos con Modalidad A. Antes de votar, cada squad se hace 4 preguntas honestamente.
+>
+> Uno: **cero** bloqueadores sin resolver. Si queda un solo bloqueador abierto, no hay GO posible.
+>
+> Dos: **hasta 5** mayores sin resolver, y con workaround aceptable documentado.
+>
+> Tres: **10 de 12** secciones completables end-to-end sin tutorial. Si más de 2 secciones requieren aclaración, es que falta trabajo editorial.
+>
+> Cuatro, la más honesta: ¿lo usarías el lunes con tu cuenta real sin avergonzarte? Si dudás, es NO-GO. No hay presión social para votar GO.
+>
+> Y un detalle: **veto técnico**. Un solo equipo puede forzar GO CONDICIONAL si tiene un bloqueador argumentado con pasos reproducibles. No se vota por encima de un hallazgo técnico sólido.
 
-| Círculo | Tag | Descripción |
-|---|---|---|
-| 1 | Facilitador | Dueño del tiempo. Rota entre equipos. Corta discusiones fuera de script. Modera la votación. |
-| 1 | Scriba | Consolida hallazgos en la planilla en vivo. Deduplica. Proyecta en pantalla en pitstops. |
-| 1 | Responsable de GTM Engineering | Aplica fixes en vivo entre bloques. Recibe batches. No defiende el diseño. |
-| N | Equipo (squad) | AD + CS (+ apoyo opcional). Testea el prototipo funcionalmente con datos de prueba. Completa la planilla. Vota al cierre (solo en Modalidad A). |
+**Guion (si Modalidad B):**
 
-**Notas del presentador:**
-Los tres roles individuales (facilitador, scriba, responsable de GTM Engineering) no pueden faltar. El scriba es el rol más subestimado y el más crítico: sin planilla viva, no hay decisión al final.
-
----
-
-## Slide 14 · Closing · Arrancamos
-
-**Layout:** dark cover full-bleed · barra azul izquierda · título gigante tipo statement · 3 bullets con dot azul al pie.
-
-**Título principal:** Arrancamos.
-**Subtítulo (azul):** En 75 minutos sabemos si este Account Plan va a producción o qué le falta.
-
-**Recordatorios (3 bullets con dot azul):**
-- Cada squad testea el prototipo vacío funcionalmente (AD + CS + apoyo opcional)
-- El responsable de GTM Engineering arregla en vivo entre bloques
-- Al cierre: **Modalidad A** · votamos GO / CONDICIONAL / NO-GO · o **Modalidad B** · entregamos el backlog al GTM, que define la próxima iteración asincrónicamente
-
-**Notas del presentador:**
-Cierre breve. No recapitular — ya saben lo que hay que hacer. Solo reforzar los 3 pilares: testing funcional, fixes en vivo, y la modalidad de cierre elegida (decidida antes del hackathon por el facilitador).
+> Este slide aplica solo a la Modalidad A, que no es la que usamos hoy. Lo saltamos. La decisión de GO / CONDICIONAL / NO-GO la toma el responsable de GTM Engineering asincrónicamente a partir del backlog que entreguemos al cierre.
 
 ---
 
-## Notas generales para el diseño
+## Slide 14 · Roles en la sesión
 
-**Sobre el flow narrativo:** los slides están pensados para leerse como un arco de 3 actos.
-- **Acto 1 · Contexto** (slides 1–5): qué es, qué decidimos, cómo funciona, quién hace qué.
-- **Acto 2 · Manual de uso** (slides 6–10): principios, scripts, plantilla.
-- **Acto 3 · Decisión** (slides 11–14): rúbrica, criterios, roles, cierre.
+**Qué muestra:** 4 cards verticales en fila, cada una con círculo dark numerado arriba, título y descripción centrada.
 
-**Sobre los motivos visuales recurrentes:**
-- Chip numerado arriba-derecha en todos los slides de contenido.
-- Badge circular o rectangular oscuro para "N° de sección" (slides 8, 9, 12, 13).
-- Cards de color para estados (GO/CONDICIONAL/NO-GO y severidades) — **usar siempre los mismos 4 colores** para que la gente los asocie rápido.
-- Footer discreto: `Acid Labs · Hackathon Account Plan ABE v9 · 1h 15min`.
+**Guion:**
 
-**Sobre la tipografía:**
-- Títulos: serif/display (Georgia, Playfair, similar) — para que los "Arrancamos" y "Por qué estamos acá" pesen.
-- Cuerpo: sans limpio (Inter, Arial, similar).
-- Badges numéricos grandes: display serif o display bold muy pesado.
-
-**Sobre el tono:**
-- Argentino/rioplatense directo. "Arranquemos", "Un squad, una lente", "Si dudás es NO-GO".
-- Sin corporativismo. Sin "alineamiento estratégico". Sin "stakeholders".
-- Cada slide tiene que poder leerse en 20–30 segundos.
+> Para cerrar antes de arrancar: hay 4 roles en la sesión.
+>
+> **Facilitador** — yo. Dueño del tiempo, rota entre equipos, corta discusiones fuera de script, modera los pitstops.
+>
+> **Scriba** — consolida los hallazgos en la planilla en vivo. Rol subestimado pero crítico: sin planilla viva no hay decisión útil al cierre.
+>
+> **Responsable de GTM Engineering** — aplica fixes entre bloques. No defiende el diseño.
+>
+> **Equipo por squad** — AD + CS + apoyo opcional. Testea el prototipo funcionalmente, completa la planilla, y vota al cierre si estamos en Modalidad A.
 
 ---
 
-**Fin del documento.** Los 14 slides contienen todo el contenido del kickoff original. Editar libremente tono, layout y motivos visuales en tu sistema de diseño.
+## Slide 15 · Arrancamos
+
+**Qué muestra:** Cover oscuro full-bleed, barra azul izquierda, título statement "Arrancamos.", 3 bullets con dot azul al pie.
+
+**Guion:**
+
+> Tres cosas para no olvidar:
+>
+> - Cada squad testea el prototipo vacío funcionalmente, con su dupla AD + CS.
+> - El responsable de GTM Engineering arregla en vivo entre bloques.
+> - Al cierre, **[Modalidad A: votamos GO / CONDICIONAL / NO-GO con rúbrica] / [Modalidad B: entregamos el backlog consolidado al GTM, que define la próxima iteración asincrónicamente]**.
+>
+> En 75 minutos sabemos si este Account Plan va a producción o qué le falta. Arranquemos.
+
+---
+
+## Notas generales para el presentador
+
+**Ritmo:** cada slide ~35–45 segundos. No te quedes clavado en uno. Si ves que te pasás, corta y pasá al siguiente — los pitstops se comen el tiempo rápido.
+
+**Bifurcaciones por modalidad:** el slide 2, el 12, el 13 y el 15 tienen variantes según Modalidad A o B. Leé las dos antes del kickoff y marcá la que vas a usar.
+
+**Cortes a hacer sin pedir permiso:**
+- Cualquier debate sobre cómo arreglar algo durante el testing → "eso lo hablamos en el pitstop, sigan capturando".
+- Cualquier pregunta "¿por qué está así el prototipo?" al responsable de GTM Engineering → "la defensa del diseño viene después, ahora captura".
+- Cualquier intento de un squad de usar datos reales de su cuenta → "hoy testeamos con datos de prueba sobre el prototipo vacío, es testing funcional".
+
+**Tono:** rioplatense directo. "Arranquemos", "ojo con X", "corto yo", "si dudás es NO-GO". Sin corporativismo, sin "alineamiento estratégico", sin "stakeholders".
+
+---
+
+**Fin del script.** El documento de diseño (`01_hackathon_design.md`) tiene el detalle operativo completo de cada bloque, la plantilla de hallazgos y la rúbrica. Esta presentación es solo el kickoff.
