@@ -1,0 +1,28 @@
+{
+  "name": "testinghackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+    "serve": "npx --yes http-server . -p 8080 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rominapicollo/testinghackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rominapicollo/testinghackathon/issues"
+  },
+  "homepage": "https://github.com/rominapicollo/testinghackathon#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "daisyui": "^5.5.19",
+    "tailwindcss": "^4.2.4"
+  }
+}

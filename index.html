@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es" data-theme="acidlabs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Hackathon — Acid Labs</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body class="min-h-screen bg-base-200 text-base-content font-sans">
+    <header class="bg-acid-gradient-2 text-white">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <p class="font-secondary uppercase tracking-widest text-sm opacity-80">
+          Acid Labs · Hackathon
+        </p>
+        <h1 class="text-5xl md:text-6xl font-extrabold mt-3">
+          Testing Hackathon
+        </h1>
+        <p class="mt-4 max-w-2xl text-lg opacity-90">
+          Proyecto base con HTML plano, Tailwind v4 y el tema Acid Labs listo para
+          imprimir a PDF.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3 no-print">
+          <a class="btn btn-accent" href="#contenido">Ver contenido</a>
+          <a class="btn btn-ghost text-white" href="./pdfs/">PDFs estáticos</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" class="max-w-5xl mx-auto px-6 py-12 space-y-10">
+      <section class="grid md:grid-cols-3 gap-6">
+        <article class="card bg-base-100 shadow">
+          <div class="card-body">
+            <h2 class="card-title">Primary</h2>
+            <p>Color principal de la marca.</p>
+            <button class="btn btn-primary mt-2 no-print">Acción</button>
+          </div>
+        </article>
+        <article class="card bg-base-100 shadow">
+          <div class="card-body">
+            <h2 class="card-title text-acid-pink">Accent</h2>
+            <p>Acentos y llamados a la acción.</p>
+            <button class="btn btn-accent mt-2 no-print">Destacar</button>
+          </div>
+        </article>
+        <article class="card bg-base-100 shadow">
+          <div class="card-body">
+            <h2 class="card-title text-acid-teal">Success</h2>
+            <p>Estados positivos y confirmaciones.</p>
+            <button class="btn btn-success mt-2 no-print">OK</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-3xl font-bold">Gradientes Acid</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-acid-gradient-1 h-24 rounded-box"></div>
+          <div class="bg-acid-gradient-2 h-24 rounded-box"></div>
+          <div class="bg-acid-gradient-3 h-24 rounded-box"></div>
+        </div>
+      </section>
+
+      <section class="prose max-w-none">
+        <h2>Imprimir a PDF</h2>
+        <p>
+          Usá <kbd class="kbd kbd-sm">⌘</kbd> + <kbd class="kbd kbd-sm">P</kbd>
+          (o <kbd class="kbd kbd-sm">Ctrl</kbd> + <kbd class="kbd kbd-sm">P</kbd>)
+          para exportar esta página como PDF. Los estilos de impresión están en
+          <code>src/style.css</code>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="border-t border-base-300 py-6 text-center text-sm opacity-70">
+      Acid Labs · testinghackathon
+    </footer>
+  </body>
+</html>

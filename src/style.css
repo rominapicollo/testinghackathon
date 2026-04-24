@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ============================================
+   ACID LABS — daisyUI Theme (Brandbook 2025)
+   Fonts: Barlow (headings/body), Montserrat (labels)
+   ============================================ */
+
+/* ---- Light Theme (default) ---- */
+@plugin "daisyui/theme" {
+  name: "acidlabs";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #F3F4FB;
+  --color-base-300: #E9EBF8;
+  --color-base-content: #081029;
+
+  --color-primary: #004CFB;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #142DCE;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #80FF80;
+  --color-accent-content: #081029;
+
+  --color-neutral: #081029;
+  --color-neutral-content: #F3F4FB;
+
+  --color-info: #3370FC;
+  --color-info-content: #ffffff;
+
+  --color-success: #07E0B9;
+  --color-success-content: #081029;
+
+  --color-warning: #F5A623;
+  --color-warning-content: #081029;
+
+  --color-error: #F3377B;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* ---- Dark Theme ---- */
+@plugin "daisyui/theme" {
+  name: "acidlabs-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #081029;
+  --color-base-200: #000047;
+  --color-base-300: #04155D;
+  --color-base-content: #E9EBF8;
+
+  --color-primary: #3370FC;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #4960F5;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #80FF80;
+  --color-accent-content: #081029;
+
+  --color-neutral: #13137D;
+  --color-neutral-content: #DDE8FF;
+
+  --color-info: #80A6FD;
+  --color-info-content: #081029;
+
+  --color-success: #07E0B9;
+  --color-success-content: #081029;
+
+  --color-warning: #F5A623;
+  --color-warning-content: #081029;
+
+  --color-error: #F3377B;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* ---- Typography ---- */
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ---- Brand Utilities ---- */
+.bg-acid-gradient-1 {
+  background: linear-gradient(135deg, #80FF80, #00FFFF, #004CFB);
+}
+.bg-acid-gradient-2 {
+  background: linear-gradient(135deg, #004CFB, #142DCE, #000047);
+}
+.bg-acid-gradient-3 {
+  background: linear-gradient(135deg, #00FFFF, #004CFB, #142DCE);
+}
+
+.text-acid-purple { color: #6C3DDD; }
+.text-acid-pink   { color: #F3377B; }
+.text-acid-teal   { color: #07E0B9; }
+.bg-acid-purple   { background-color: #6C3DDD; }
+.bg-acid-pink     { background-color: #F3377B; }
+.bg-acid-teal     { background-color: #07E0B9; }
+
+/* ---- Print (PDF) styles ---- */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+  html, body {
+    background: #ffffff !important;
+    color: #081029 !important;
+  }
+  .no-print { display: none !important; }
+}
