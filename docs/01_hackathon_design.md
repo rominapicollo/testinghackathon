@@ -1,11 +1,11 @@
 # Hackathon de Testing · Account Plan ABE v9
-**Duración:** 1h 15min · **Equipos:** 1 por squad de cuenta · **Programador en vivo aplicando fixes** · **Output:** decisión GO / GO CONDICIONAL / NO-GO + backlog priorizado
+**Duración:** 1h 15min · **Equipos:** 1 por squad (AD + CS + rol de apoyo opcional) · **Responsable de GTM Engineering en vivo aplicando fixes** · **Output:** decisión GO / GO CONDICIONAL / NO-GO + backlog priorizado
 
 ---
 
 ## 1. Objetivo
 
-En 75 minutos, con cada squad testeando el prototipo con una cuenta real que ya conocen, validar si el Plan de Cuenta ABE está listo para ir a producción piloto. El programador está en la sala aplicando arreglos en vivo entre bloques, así que el hackathon funciona como un mini ciclo de iteración comprimido: testear → reportar → arreglar → retestear → decidir.
+En 75 minutos, con cada squad testeando el prototipo con una cuenta real que ya conocen, validar si el Plan de Cuenta ABE está listo para ir a producción piloto. El responsable de GTM Engineering está en la sala aplicando arreglos en vivo entre bloques, así que el hackathon funciona como un mini ciclo de iteración comprimido: testear → reportar → arreglar → retestear → decidir.
 
 Al cierre, se define:
 - **GO LIVE** (lanzamos piloto con cuentas reales),
@@ -16,17 +16,17 @@ Al cierre, se define:
 
 ## 2. Estructura general
 
-**Una novedad clave respecto a un hackathon tradicional:** el programador está en la sala y **aplica fixes entre bloques**. Cada "pitstop" es una ronda rápida donde los equipos le pasan su batch de hallazgos y él los va resolviendo en paralelo mientras los equipos siguen testeando. En el bloque final se **retestea lo que ya se arregló**, lo que baja la severidad del backlog antes de la votación.
+**Una novedad clave respecto a un hackathon tradicional:** el responsable de GTM Engineering está en la sala y **aplica fixes entre bloques**. Cada "pitstop" es una ronda rápida donde los equipos le pasan su batch de hallazgos y él los va resolviendo en paralelo mientras los equipos siguen testeando. En el bloque final se **retestea lo que ya se arregló**, lo que baja la severidad del backlog antes de la votación.
 
 | # | Bloque | Duración | Qué hace cada actor |
 |---|---|---|---|
 | 0 | **Kickoff** | 5 min | Facilitador presenta objetivo, reglas, plantilla. Equipos se ubican. |
 | 1 | **Smoke Test común** | 8 min | Equipos corren el smoke con su cuenta. Cargan primeros hallazgos. |
-| — | **🔧 Pitstop 1** | 4 min | Scriba consolida. Programador recibe **Batch 1** y arranca. |
+| — | **🔧 Pitstop 1** | 4 min | Scriba consolida. Responsable de GTM Engineering recibe **Batch 1** y arranca. |
 | 2 | **Script · Primera mitad** (Setup + Financials) | 18 min | Equipos cargan Ficha/Squad/Contexto/Métricas/Nómina. |
-| — | **🔧 Pitstop 2** | 5 min | Ronda rápida. Programador entrega Batch 1 terminado, recibe Batch 2. |
+| — | **🔧 Pitstop 2** | 5 min | Ronda rápida. Responsable de GTM Engineering entrega Batch 1 terminado, recibe Batch 2. |
 | 3 | **Script · Segunda mitad + Retest** | 20 min | Equipos cargan las secciones restantes y retestean fixes del Batch 1. |
-| — | **🔧 Pitstop 3** | 3 min | Último batch entregado al programador. |
+| — | **🔧 Pitstop 3** | 3 min | Último batch entregado al responsable de GTM Engineering. |
 | 4 | **Cierre · GO/NO-GO + Backlog** | 12 min | Votación con rúbrica. Consolidación del backlog P0/P1/P2. |
 
 **Total: 75 min.**
@@ -44,9 +44,9 @@ Esto tiene dos ventajas importantes. Primero, los hallazgos son complementarios 
 
 ---
 
-## 4. Rol del programador en vivo
+## 4. Rol del responsable de GTM Engineering en vivo
 
-El programador no testea, no participa en los equipos y no se defiende. Su trabajo en los 75 minutos es:
+El responsable de GTM Engineering no testea, no participa en los equipos y no se defiende. Su trabajo en los 75 minutos es:
 
 - **Recibir batches** en los tres pitstops (no leer hallazgos sueltos durante los bloques).
 - **Priorizar** qué atacar primero: bloqueadores y mayores con fix obvio y acotado.
@@ -54,7 +54,7 @@ El programador no testea, no participa en los equipos y no se defiende. Su traba
 - **Avisar al facilitador** cuando un fix está listo y en qué sección, para que se pueda retestear.
 - **No defender el diseño.** Si un equipo pregunta "¿por qué está así?", el facilitador corta: la intención se discute después.
 
-Buena regla: el programador ataca primero **bloqueadores con fix corto** (validaciones faltantes, cálculos mal, labels confusas). Reestructuraciones grandes (ej: persistencia, integración con Looker) se documentan como P0 para post-hackathon, no se intentan en vivo.
+Buena regla: el responsable de GTM Engineering ataca primero **bloqueadores con fix corto** (validaciones faltantes, cálculos mal, labels confusas). Reestructuraciones grandes (ej: persistencia, integración con Looker) se documentan como P0 para post-hackathon, no se intentan en vivo.
 
 ---
 
@@ -81,7 +81,7 @@ Sirve para verificar que el prototipo carga en todas las máquinas y para calibr
 
 - **Facilitador:** va equipo por equipo, 30 segundos cada uno, para mencionar hallazgos del smoke.
 - **Scriba:** marca en la planilla los hallazgos del Batch 1.
-- **Programador:** recibe el batch, define qué ataca primero.
+- **Responsable de GTM Engineering:** recibe el batch, define qué ataca primero.
 - **Equipos:** mientras, leen el script de la primera mitad.
 
 ### Bloque 2 · Script · Primera mitad (18 min) — Setup + Financials
@@ -106,7 +106,7 @@ Foco: completar la estructura base del plan con datos reales. Cubre 5 secciones.
 ### 🔧 Pitstop 2 (5 min)
 
 - **Facilitador:** ronda de 45s por equipo con hallazgos más relevantes.
-- **Programador:** avisa qué fixes del Batch 1 ya aplicó y en qué sección pueden retestear. Recibe Batch 2.
+- **Responsable de GTM Engineering:** avisa qué fixes del Batch 1 ya aplicó y en qué sección pueden retestear. Recibe Batch 2.
 - **Equipos:** toman nota de qué retestear en el Bloque 3.
 
 ### Bloque 3 · Script · Segunda mitad + Retest (20 min) — Operación y estrategia
@@ -123,7 +123,7 @@ Foco: secciones operacionales + confirmación de fixes del Batch 1. Cubre 6 secc
 11. **11 · Competencia** — cargar 1–2 vendors reales y 2 gerencias con Share of Wallet estimado.
 
 **Retest obligatorio al final (≈ 3 min):**
-- El facilitador le pregunta al programador qué fixes aplicó del Batch 1.
+- El facilitador le pregunta al responsable de GTM Engineering qué fixes aplicó del Batch 1.
 - Cada equipo retestea los puntos fixados en **su planilla** y actualiza el estado del hallazgo a **"Verificado · fix OK"** o **"Verificado · fix incompleto"**.
 
 **Qué mirar con lupa:**
@@ -137,7 +137,7 @@ Foco: secciones operacionales + confirmación de fixes del Batch 1. Cubre 6 secc
 
 - **Facilitador:** último barrido express, 30s por equipo para hallazgos de último momento del Bloque 3.
 - **Scriba:** cierra la planilla, deduplica hallazgos repetidos.
-- **Programador:** si hay un fix trivial que alcanza a aplicar, adelante; si no, lo deja documentado como P0.
+- **Responsable de GTM Engineering:** si hay un fix trivial que alcanza a aplicar, adelante; si no, lo deja documentado como P0.
 
 ### Bloque 4 · Cierre · GO/NO-GO + Backlog (12 min)
 
@@ -172,7 +172,7 @@ Archivo compartido (Google Sheet convertido desde el xlsx que se entrega con est
 | Severidad | 🔴 Bloqueador / 🟠 Mayor / 🟡 Menor / 🟢 Nice-to-have | Mayor |
 | Impacto | Una línea: a quién afecta, cuánto duele | AD podría reportar un DPRR imposible en QBR |
 | Estado | Abierto / En fix / Verificado fix OK / Verificado fix incompleto | En fix |
-| Asignado a | Programador (nombre) | Juan |
+| Asignado a | Responsable de GTM Engineering (nombre) | Juan |
 | Notas | Comentarios adicionales | Fix aplicado 11:40, ok tras retest |
 
 **Regla de oro del scriba:** si dos squads reportan lo mismo, consolidar en una fila única con ambos IDs (ej: `T1-07 / T3-12`). Repeticiones = señal fuerte.
@@ -217,7 +217,7 @@ Cada squad, antes de votar, contesta honestamente:
 |---|---|---|
 | **Facilitador** | Dueño del tiempo. Rota entre equipos. Corta discusiones fuera de script. Moderará la votación final. | 1 |
 | **Scriba** | Consolida hallazgos en la planilla en vivo. Deduplica. Proyecta en pantalla en los pitstops. | 1 |
-| **Programador** | Aplica fixes en vivo entre bloques. Recibe batches en los pitstops. No defiende el diseño. | 1 |
+| **Responsable de GTM Engineering** | Aplica fixes en vivo entre bloques. Recibe batches en los pitstops. No defiende el diseño. | 1 |
 | **Equipo (por squad)** | Testea con su cuenta real. Completa la planilla. Vota al cierre. | 1 squad por equipo |
 
 ---
@@ -228,7 +228,7 @@ Cada squad, antes de votar, contesta honestamente:
 - [ ] Planilla de hallazgos (xlsx) convertida a Google Sheet y compartida con permiso de edición a todos los squads
 - [ ] HTML del prototipo enviado por mail a cada squad
 - [ ] Confirmación de squads participantes y sala/Zoom
-- [ ] Facilitador, scriba y programador asignados y alineados
+- [ ] Facilitador, scriba y responsable de GTM Engineering asignados y alineados
 - [ ] Pantalla compartida lista para pitstops y cierre
 - [ ] Cronómetro visible con los bloques precargados
 

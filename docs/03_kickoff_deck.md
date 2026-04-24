@@ -20,7 +20,7 @@ Cada slide tiene título, subtítulo, cuerpo y notas del presentador. El cuerpo 
 
 **Kicker (eyebrow):** HACKATHON DE TESTING
 **Título principal:** Account Plan ABE · v9
-**Subtítulo:** 1h 15min · 1 squad = 1 equipo · Programador aplicando fixes en vivo
+**Subtítulo:** 1h 15min · 1 squad = 1 equipo · Responsable de GTM Engineering aplicando fixes en vivo
 
 **Cards (3, en pie de slide):**
 
@@ -66,7 +66,7 @@ No es "aprobemos y salimos". Es "decidimos juntos con evidencia". La diferencia 
 
 **Número de slide:** 02
 **Título:** Agenda · 75 minutos
-**Subtítulo:** 4 bloques de testing + 3 pitstops donde el programador aplica fixes en vivo
+**Subtítulo:** 4 bloques de testing + 3 pitstops donde el responsable de GTM Engineering aplica fixes en vivo
 
 **Timeline:**
 
@@ -74,7 +74,7 @@ No es "aprobemos y salimos". Es "decidimos juntos con evidencia". La diferencia 
 |---|---|---|---|
 | 0 | Kickoff | 5 min | Contexto, reglas, presentación de equipos |
 | 1 | Smoke Test común | 8 min | 6 steps básicos · calibra severidad entre equipos |
-| 🔧 | **Pitstop 1** | 4 min | Programador recibe Batch 1 y arranca fixes |
+| 🔧 | **Pitstop 1** | 4 min | Responsable de GTM Engineering recibe Batch 1 y arranca fixes |
 | 2 | Script · Primera mitad | 18 min | Secciones 01–05 · Ficha, Squad, Contexto, Métricas, Nómina |
 | 🔧 | **Pitstop 2** | 5 min | Fixes del Batch 1 listos · se entrega Batch 2 |
 | 3 | Script · Segunda mitad + Retest | 20 min | Secciones 06–11 + retest de fixes del Batch 1 |
@@ -82,7 +82,7 @@ No es "aprobemos y salimos". Es "decidimos juntos con evidencia". La diferencia 
 | 4 | Cierre · GO/NO-GO | 12 min | Votación con rúbrica · consolidación del backlog P0/P1/P2 |
 
 **Notas del presentador:**
-Los pitstops son sagrados. Sin pitstop, el programador no arregla nada en vivo. La duración parece ajustada pero es real: lo calibramos para que no corra nadie.
+Los pitstops son sagrados. Sin pitstop, el responsable de GTM Engineering no arregla nada en vivo. La duración parece ajustada pero es real: lo calibramos para que no corra nadie.
 
 ---
 
@@ -113,18 +113,18 @@ La división por squads no es aleatoria. Es la forma más rápida de cubrir todo
 
 ---
 
-## Slide 5 · El programador en vivo
+## Slide 5 · El responsable de GTM Engineering en vivo
 
 **Layout:** 5 pasos del flujo en horizontal (bloques alternando colores) + 2 columnas abajo (Sí hace / No hace).
 
 **Número de slide:** 04
-**Título:** El programador en vivo · la novedad de este hackathon
+**Título:** El responsable de GTM Engineering en vivo · la novedad de este hackathon
 **Subtítulo:** Mini ciclo de iteración comprimido en 75 min: testear → reportar → arreglar → retestear → decidir
 
 **Flujo horizontal (5 bloques):**
 1. Equipos testean *(color: azul light)*
 2. Pitstop → *(color: ámbar light)*
-3. Programador arregla *(color: verde light)*
+3. Responsable de GTM Engineering arregla *(color: verde light)*
 4. Pitstop → *(color: ámbar light)*
 5. Retest *(color: azul light)*
 
@@ -143,7 +143,7 @@ La división por squads no es aleatoria. Es la forma más rápida de cubrir todo
 - No improvisa fuera de los batches asignados
 
 **Notas del presentador:**
-Esta es la diferencia clave de este hackathon. La regla de oro es: el programador ataca primero bloqueadores con fix corto y acotado. Nada de refactorear en vivo.
+Esta es la diferencia clave de este hackathon. La regla de oro es: el responsable de GTM Engineering ataca primero bloqueadores con fix corto y acotado. Nada de refactorear en vivo.
 
 ---
 
@@ -162,7 +162,7 @@ Esta es la diferencia clave de este hackathon. La regla de oro es: el programado
 | 2 | Si algo les hace fruncir el ceño, anótenlo. | La fricción es un hallazgo válido aunque nada esté "roto". |
 | 3 | Un hallazgo = una fila. | Síntoma observable + sección + severidad. Sin ensayo literario. |
 | 4 | Prohibido decir "quedaría lindo si…" | …sin decir qué problema concreto resuelve. |
-| 5 | No discutir soluciones durante testing. | Solo capturar. El diseño viene después con el programador y el facilitador. |
+| 5 | No discutir soluciones durante testing. | Solo capturar. El diseño viene después con el responsable de GTM Engineering y el facilitador. |
 | 6 | Hallazgo repetido = señal fuerte. | Si dos squads reportan lo mismo, no es ruido — es prioridad. |
 
 **Notas del presentador:**
@@ -243,10 +243,10 @@ En este bloque se carga la estructura base del plan. Ojo con las inconsistencias
 | 11 | Competencia | 1–2 vendors reales · 2 gerencias con Share of Wallet estimado |
 
 **Caja "🔄 Retest obligatorio al final (≈3 min)" (pie de slide, fondo azul light):**
-El facilitador le pregunta al programador qué fixes del Batch 1 aplicó. Cada equipo retestea en su cuenta y actualiza el estado en la planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
+El facilitador le pregunta al responsable de GTM Engineering qué fixes del Batch 1 aplicó. Cada equipo retestea en su cuenta y actualiza el estado en la planilla: "Verificado · fix OK" o "Verificado · fix incompleto".
 
 **Notas del presentador:**
-El retest es lo que cierra el loop. Si no retestean, los fixes del programador no bajan la severidad del backlog y la votación final queda falseada.
+El retest es lo que cierra el loop. Si no retestean, los fixes del responsable de GTM Engineering no bajan la severidad del backlog y la votación final queda falseada.
 
 ---
 
@@ -277,7 +277,7 @@ El retest es lo que cierra el loop. Si no retestean, los fixes del programador n
 Si dos squads reportan lo mismo, se consolida en UNA fila con ambos IDs (ej: T1-07 / T3-12). Repeticiones = señal fuerte.
 
 **Notas del presentador:**
-Una fila por hallazgo. Sin ensayo literario. Con los pasos para reproducir bien claros, porque el programador los va a leer rápido en los pitstops.
+Una fila por hallazgo. Sin ensayo literario. Con los pasos para reproducir bien claros, porque el responsable de GTM Engineering los va a leer rápido en los pitstops.
 
 ---
 
@@ -341,11 +341,11 @@ La cuarta pregunta es la más importante. Si algún equipo duda, es NO-GO. No ha
 |---|---|---|
 | 1 | Facilitador | Dueño del tiempo. Rota entre equipos. Corta discusiones fuera de script. Modera la votación. |
 | 1 | Scriba | Consolida hallazgos en la planilla en vivo. Deduplica. Proyecta en pantalla en pitstops. |
-| 1 | Programador | Aplica fixes en vivo entre bloques. Recibe batches. No defiende el diseño. |
+| 1 | Responsable de GTM Engineering | Aplica fixes en vivo entre bloques. Recibe batches. No defiende el diseño. |
 | N | Equipo (squad) | Testea con su cuenta real. Completa la planilla. Vota al cierre. |
 
 **Notas del presentador:**
-Los tres roles individuales (facilitador, scriba, programador) no pueden faltar. El scriba es el rol más subestimado y el más crítico: sin planilla viva, no hay decisión al final.
+Los tres roles individuales (facilitador, scriba, responsable de GTM Engineering) no pueden faltar. El scriba es el rol más subestimado y el más crítico: sin planilla viva, no hay decisión al final.
 
 ---
 
@@ -358,7 +358,7 @@ Los tres roles individuales (facilitador, scriba, programador) no pueden faltar.
 
 **Recordatorios (3 bullets con dot azul):**
 - Cada squad con SU cuenta real
-- El programador arregla en vivo entre bloques
+- El responsable de GTM Engineering arregla en vivo entre bloques
 - Al cierre votamos GO · GO CONDICIONAL · NO-GO
 
 **Notas del presentador:**
